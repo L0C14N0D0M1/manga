@@ -1,0 +1,367 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(37, 37, 37);
+}
+
+/*menu*/
+
+.menu_je {
+    display: flex;
+}
+
+li {
+    list-style-type: none;
+}
+
+.menu_in {
+    text-decoration: none;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    margin-left: 50px;
+    font-size: 50px;
+}
+
+#home_icon {
+    font-size: 50px;
+    color: white;
+    margin-top: 15px;
+}
+
+.menu_ge {
+    text-decoration: none;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    margin-left: 150px;
+    font-size: 50px;
+}
+
+.menu_es {
+    text-decoration: none;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    margin-left: 500px;
+    font-size: 50px;
+}
+
+.menu_di {
+    text-decoration: none;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    margin-left: 140px;
+    font-size: 50px;
+}
+
+/*no importa este menu*/
+
+.menu {
+    visibility: hidden;
+}
+
+/*responsive menu*/
+.menu {
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
+
+#btn-menu {
+    display: none;
+}
+
+.menu label {
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-right: 1px solid #fff;
+}
+.menu label:hover {
+    cursor: pointer;
+    background: rgba(0,0,0,0.3);
+}
+
+.menu_1 ul {
+    margin: 0%;
+    list-style: none;
+    padding: 0%;
+    display: flex;
+    justify-content: center;
+}
+
+.menu_1 li {
+    border-right: 1px solid rgb(0, 0, 0);
+}
+
+.menu_1 li:hover {
+    background: rgba(0,0,0,0.3);
+}
+
+.menu_1 li a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width:413px) {
+
+    .menu_je {
+        visibility: hidden;
+    }
+
+    .menu {
+        visibility: visible;
+        width: 370px;
+    }
+
+    .menu label {
+        margin-top: -145px;
+        display: block;
+    }
+
+    .menu_1 {
+        position: absolute;
+        background: rgba(0,0,0,0.3);
+        width: 70%;
+        margin-left: -70%;
+    }
+
+    .menu_1 ul {
+        flex-direction: column;
+    }
+
+    .menu_1 li {
+        border-top: 1px solid black;
+    }
+
+   #btn-menu:checked ~.menu_1 {
+       transition: 0.5s;
+      margin: 0%;
+   }
+}
+
+/*BUSCADOR*/
+
+#ctn-icon-search {
+    margin-top: -470px;
+    margin-left: 800px;
+    position: absolute;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#ctn-icon-search i {
+    margin-top: -10px;
+    position: absolute;
+    color: white;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+
+#ctn-icon-search i:hover {
+    color: black;
+}
+
+
+#ctn-bars-search {
+    position: fixed;
+    margin-top: -25px;
+    top: -100px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.0);
+    padding: 20px;
+    transition: all 600ms;
+    z-index: 9;
+}
+
+#ctn-bars-search input {
+    display: block;
+    width: 70%;
+    margin: auto;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#box-search {
+    position: fixed;
+    display: block;
+    margin-left: 21px;
+    margin-top: -32px;
+    top: 165px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1230px;
+    background-color: rgb(0,0,0,0.0);
+    overflow: hidden;
+    display: none;
+    font-family: 'Oswald', sans-serif;
+}
+
+#box-search li a {
+    display: block;
+    text-decoration: none;
+    font-size: 40px;
+    width: 1200px;
+    color: #777777;
+    padding: 12px 20px;
+}
+
+.title_b {
+    margin-top: -95px;
+    margin-bottom: 30px;
+    margin-left: 100px;
+}
+
+.title_japo {
+    font-size: 0px;
+    opacity: 0;
+}
+
+#box-search li a:hover {
+    background: #f3f3f3;
+}
+
+#box-search li a i {
+    margin-right: 10px;
+    color: #777777;
+}
+
+#cover-ctn-search {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0%;
+    background-color: rgb(0,0,0,0.5);
+    display: none;
+}
+
+.img_buscador {
+    width: 70px;
+    height: 110px;
+}
+
+.img_buscador2 {
+    width: 70px;
+    height: 110px;
+}
+
+
+/*responsive buscador*/
+
+@media (max-width: 412px) {
+
+    #ctn-icon-search {
+        margin-top: -480px;
+        margin-left: 330px;
+        position: absolute;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+    
+    }
+    
+    #ctn-icon-search i {
+        margin-top: -10px;
+        position: absolute;
+        color: white;
+        cursor: pointer;
+        transition: all 300ms;
+    }
+    
+    
+    #ctn-icon-search i:hover {
+        color: black;
+    }
+    
+    
+    #ctn-bars-search {
+        position: fixed;
+        margin-top: -31px;
+        top: -100px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.0);
+        padding: 20px;
+        transition: all 600ms;
+        z-index: 9;
+    }
+    
+    #ctn-bars-search input {
+        display: block;
+        width: 20%;
+        margin-left: 5px;
+        padding: 10px;
+        font-size: 20px;
+    }
+    
+    #box-search {
+        position: fixed;
+        display: block;
+        margin-left: -440px;
+        margin-top: -32px;
+        top: 165px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1100px;
+        background-color: rgb(0,0,0,0.0);
+        overflow: hidden;
+        display: none;
+        font-family: 'Oswald', sans-serif;
+    }
+
+    #box-search li a {
+        display: block;
+        text-decoration: none;
+        font-size: 25px;
+        margin-left: 250px;
+        width: 30%;
+        color: #777777;
+        padding: 12px 20px;
+    }
+
+    .title_b {
+        margin-top: -95px;
+        margin-bottom: 30px;
+        margin-left: 100px;
+    }
+    
+    .title_japo {
+        font-size: 0px;
+        opacity: 0;
+    }
+    
+    #box-search li a:hover {
+        background: #f3f3f3;
+    }
+    
+    
+    #cover-ctn-search {
+        width: 90%;
+        height: 100%;
+        position: absolute;
+        left: 0%;
+        background-color: rgb(0,0,0,0.5);
+        display: none;
+    }
+    
+    .img_buscador {
+        width: 70px;
+        height: 110px;
+        margin-bottom: 10px;
+    }
+
+    .img_buscador2 {
+        width: 70px;
+        height: 110px;
+        margin-bottom: 20px;
+    }
+    
+}
