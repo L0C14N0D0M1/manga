@@ -258,7 +258,7 @@ li {
 @media (max-width: 412px) {
 
     #ctn-icon-search {
-        margin-top: -880px;
+        margin-top: 180px;
         margin-left: 330px;
         position: absolute;
         height: 100%;
